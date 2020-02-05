@@ -1,0 +1,5 @@
+exclude =
+    migrations,
+    __pychche__,
+    manage.py,
+    settings.py

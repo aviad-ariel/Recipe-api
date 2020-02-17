@@ -49,7 +49,7 @@ class PrivateTagAPITest(TestCase):
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)
 
-    def test_tags_for_user(self):
+    def test_tags_limited_to_user(self):
         """Test that tags returned are only owned by authenticated user"""
         other_user = get_user_model().objects.create_user('t@t.com', 'tpass')
         Tag.objects.create(user=other_user, name='test_0')

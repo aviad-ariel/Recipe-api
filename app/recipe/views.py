@@ -22,7 +22,6 @@ class BaseRecipeComponents(viewsets.GenericViewSet,
 
 class TagViewSet(BaseRecipeComponents):
     """Manage tags"""
-
     queryset = Tag.objects.all()
     serializer_class = serializers.TagSerializer
 
